@@ -1,0 +1,8 @@
+0000000000000000000000000000000000000000 84240c4e15943911f5432001ed9258c928c65933 Jefferson Chunga <Jchungaz@autonoma.edu.pe> 1730386882 -0500	commit (initial): tienda
+84240c4e15943911f5432001ed9258c928c65933 0000000000000000000000000000000000000000 Jefferson Chunga <Jchungaz@autonoma.edu.pe> 1730387056 -0500	Branch: renamed refs/heads/master to refs/heads/main
+0000000000000000000000000000000000000000 84240c4e15943911f5432001ed9258c928c65933 Jefferson Chunga <Jchungaz@autonoma.edu.pe> 1730387056 -0500	Branch: renamed refs/heads/master to refs/heads/main
+84240c4e15943911f5432001ed9258c928c65933 8110a92bbf8354c42cc8b14911a3d4c83f77e21c jchungadev <jchungaz@autonoma.edu.pe> 1730651376 -0500	commit: first commit
+8110a92bbf8354c42cc8b14911a3d4c83f77e21c 0000000000000000000000000000000000000000 jchungadev <jchungaz@autonoma.edu.pe> 1730651454 -0500	Branch: renamed refs/heads/main to refs/heads/main
+8110a92bbf8354c42cc8b14911a3d4c83f77e21c 8110a92bbf8354c42cc8b14911a3d4c83f77e21c jchungadev <jchungaz@autonoma.edu.pe> 1730651454 -0500	Branch: renamed refs/heads/main to refs/heads/main
+8110a92bbf8354c42cc8b14911a3d4c83f77e21c d8157edd0b43adc2f2e776dd924fe0b4898d4e14 jchungadev <jchungaz@autonoma.edu.pe> 1730651669 -0500	pull origin main --rebase (start): checkout d8157edd0b43adc2f2e776dd924fe0b4898d4e14
+d8157edd0b43adc2f2e776dd924fe0b4898d4e14 ca56cf6e4424bfc2953690b1cded2b0549349dd6 jchungadev <jchungaz@autonoma.edu.pe> 1730652147 -0500	commit: first commit

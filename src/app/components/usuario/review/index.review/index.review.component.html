@@ -1,0 +1,67 @@
+<app-nav></app-nav>
+<main  class="cs-page-wrapper">
+    <nav class="bg-secondary mb-3" aria-label="breadcrumb" style="position: fixed; width: 100%; z-index: 1000;">
+        <div class="container">
+          <ol class="breadcrumb breadcrumb-alt mb-0" style="margin-top: 60px !important;">
+            <li class="breadcrumb-item" style="margin-top: 30px !important;">
+              <a [routerLink]="['/']"><i class="cxi-home"></i></a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page" style="margin-top: 30px !important;">Mis reseñas</li>
+          </ol>
+        </div>
+      </nav>
+      <div style="background-color: white; height: 150px;"></div>
+      <section class="container pt-3 pt-lg-4 pb-5 pb-lg-6">
+        <div class="row pb-2 pb-lg-0">
+
+          <!-- Account menu (sticky sidebar) -->
+          <aside class="col-xl-3 col-lg-4 pb-3 mb-4 mb-lg-0">
+            <app-siderbar></app-siderbar>
+          </aside>
+
+
+          <!-- Content -->
+          <div class="col-lg-8 ml-auto">
+            <div class="d-flex align-items-center justify-content-between mb-4 pb-sm-2">
+                <h1 class="h2 mb-0">Mis Reseñas</h1>
+              </div>
+              <div class="row" *ngIf="!load_data">
+                <div class="col-12 mb-3" *ngFor="let item of reviews | slice: (page-1)*pageSize : (page-1)* pageSize + pageSize;">
+                  <div class="mb-4 pb-4 border-bottom">
+                    <div class="row">
+                      <div class="col-md-3 col-sm-4 mb-sm-0 mb-3">
+                        <h3 class="mb-2 font-size-lg">{{item.cliente.nombres}} {{item.cliente.apellidos}}</h3>
+                        <span class="d-block mb-3 font-size-sm text-muted">{{item.createdAt|date}}</span>
+                        <div class="mt-n1 star-rating">
+                          <ngx-stars [readonly]="true" [color]="'#f89828'" [initialStars]="item.estrellas"></ngx-stars>                                                
+                        </div>
+                      </div>
+                      <div class="col">
+                        <p class="mb-3">
+                          <a class="mr-1 font-weight-bold text-decoration-none" href="#">@{{item.cliente.email}}</a>
+                            <br>
+                          {{item.review}}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row" *ngIf="load_data">
+                <div class="col-12 text-center">
+                  <div class="spinner-grow text-success" role="status">
+                    <span class="visually-hidden"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-12">
+                  <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="reviews.length"></ngb-pagination>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+</main>
+<app-footer></app-footer>

@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
+.container-fluid{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background-color: #eaffff;
+
+}
+.container-fluid .titulo{
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    position: relative;
+    bottom: 110px;
+    margin-top: 140px !important;
+
+}
+.container-fluid .titulo .imagen-izquierda{
+  float: left; 
+  margin-right: 10px; 
+}
+
+.container-fluid .titulo .imagen-derecha{
+  float: right;
+  margin-left: 10px;
+}
+
+.container-fluid .contenido{
+  margin: 0px 20px;
+
+  font-size: 80px;
+  font-weight: 600;
+  flex: 1;
+  font-family: 'Merienda', cursive;
+  background: linear-gradient(black, #05d1d3) ;
+  color:transparent;
+  background-clip: text ;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  animation: text 5s linear infinite;
+  padding: 0 0px;
+}
+
+.wrapper{
+  position: relative;
+  bottom: 120px;
+  width: 500px;
+  height: 500px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+.wrapper .title{
+  font-size: 35px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  user-select: none;
+  border-radius: 15px 15px 0 0;
+  background-color: #03cea4;
+}
+.wrapper form{
+  padding: 10px 30px 50px 30px;
+}
+.wrapper form .field{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+.wrapper form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.wrapper form .field input:focus,
+form .field input:valid{
+  border-color:#17696a
+}
+.wrapper form .field label{
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+
+}
+form .field input:focus ~ label,
+form .field input:valid ~ label{
+  top: 0%;
+  font-size: 16px;
+  color: #17696a;
+  background: #fff;
+  transform: translateY(-50%);
+}
+form .content{
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-around;
+}
+form .content .checkbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form .content input{
+  width: 15px;
+  height: 15px;
+  background: red;
+}
+form .content label{
+  color: #262626;
+  user-select: none;
+  padding-left: 5px;
+}
+form .content .pass-link{
+  color: "";
+}
+form .field input[type="submit"]{
+  color: #fff;
+  border: none;
+  padding-left: 0;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #03cea4;
+  transition: all 0.3s ease;
+}
+form .field input[type="submit"]:active{
+  transform: scale(0.95);
+}
+form .signup-link{
+  color: #262626;
+  margin-top: 20px;
+  text-align: center;
+}
+form .pass-link a,
+form .signup-link a{
+  color: #51a6a7;
+  text-decoration: none;
+  
+}
+form .pass-link a:hover,
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+
+.info i{
+  font-size: 30px;
+  border-radius: 50%;
+  background-color:#007bff ;
+  color: white;
+  padding: 8px;  
+  box-shadow: 0 0 8px #007bff; /* Box shadow con desplazamiento horizontal 0, desplazamiento vertical 0, desenfoque 10px y color negro con opacidad 0.5 */
+}
+
+.field {
+  position: relative;
+  display: inline-block;
+}
+
+.password-input {
+  padding-right: 30px; /* Ajusta el padding para dejar espacio al ícono */
+}
+
+.show-password-button {
+  position: absolute;
+  right: 10px; /* Ajusta el valor para posicionar el botón en el lado derecho */
+  top: 50%;
+  transform: translateY(-50%);
+  border: none; /* Quita el borde del botón */
+  background: none; /* Quita el fondo del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.show-password-button .icon {
+  color: #000; /* Cambia el color del icono si es necesario */
+}
+
+.password-toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input {
+  flex: 1;
+}
+
+.show-password-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.show-password-button .icon {
+  color: #000; /* Cambia el color del icono si es necesario */
+ 
+}

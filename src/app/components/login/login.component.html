@@ -1,0 +1,96 @@
+
+<app-nav></app-nav>
+<div class="container-fluid">
+  <div class="pt-5 mt-5 titulo">
+    <img src="../../../assets/img/casco.png" width="110" class="imagen-izquierda">
+    <p class="contenido">Bienvenido a FerreLomas</p>
+    <img src="../../../assets/img/martillo.png" width="110" class="imagen-derecha">
+  </div>
+
+  <div class="wrapper">
+    <div class="title">
+      Inicio de Sesión
+    </div>
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+      <div class="ont-size-sm text-muted text-center mt-3">
+        <p>Inicie sesión en su cuenta utilizando el correo electrónico y la contraseña proporcionados durante el registro.</p>
+      </div>
+      <div class="field mt-3 mb-3">
+        <input type="text" required name="email" [(ngModel)]="user.email">
+        <label>Correo Electrónico</label>
+      </div>
+
+      <div class="field">
+        <input type="password" id="txtPassword" required name="password" [(ngModel)]="user.password" class="password-input">
+        <button id="show_password" class="show-password-button" type="button" (click)="mostrar_password()">
+          <span class="fa fa-eye-slash icon"></span>
+        </button>
+        <label>Contraseña</label>
+      </div>
+      <div class="field">
+        <input type="submit" value="Iniciar Sesión">
+      </div>
+      <div class="signup-link" style="margin-top: 35px;">
+        No tienes una cuenta? <a style="cursor: pointer;" data-toggle="modal" data-target="#login">Registrate aquí</a>   
+      </div>
+    </form>
+  </div>
+</div>
+
+  <!-- Modal markup -->
+  <form #registroForm="ngForm" (ngSubmit)="registro(registroForm)">
+  <div class="modal fade" tabindex="-1" style="display:none;" aria-hidden="true" id="login">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #104a4b;">
+          <h5 class="modal-title" style="color: white; font-family: 'Times New Roman', Times, serif; font-size: 25px;">Formulario de Registro</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close" (click)="cerrarModal()"> 
+            <span aria-hidden="true" style="color: white; font-size: 25px;">x</span>
+          </button>
+        </div>
+
+
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nombres:</label>
+              <input class="form-control" type="text" id="name" placeholder="Ingrese sus nombres" required name="nombres"
+                [(ngModel)]="usuario_register.nombres">
+            </div>
+            <div class="mb-3">
+              <label for="name" class="form-label">Apellidos:</label>
+              <input class="form-control" type="text" id="name" placeholder="Ingrese sus apellidos" required name="apellidos"
+                [(ngModel)]="usuario_register.apellidos">
+            </div>
+            <div class="mb-3">
+              <label for="email2" class="form-label">Correo electrónico</label>
+              <input class="form-control" type="email" placeholder="Ingrese su correo electrónico" required name="email"
+                [(ngModel)]="usuario_register.email">
+            </div>
+            <div class="mb-4">
+              <label for="pass1" class="form-label">Contraseña</label>
+              <div class="password-toggle">
+                <input id="txtPassword1" class="form-control password-input" placeholder="Ingrese su contraseña" type="password" required name="password1" [(ngModel)]="usuario_register.password">
+                <button id="show_password1" class="btn btn-primary show-password-button" type="button" (click)="mostrar_password_register1()">
+                  <span class="fa fa-eye-slash icon" id="icon1"></span>
+                </button>
+              </div>
+            </div>
+            
+            <div class="mb-4">
+              <label for="pass2" class="form-label">Confirmar Contraseña</label>
+              <div class="password-toggle">
+                <input id="txtPassword2" class="form-control password-input" placeholder="Confirme su contraseña" type="password" required name="password2" [(ngModel)]="usuario_register.password2">
+                <button id="show_password2" class="btn btn-primary show-password-button" type="button" (click)="mostrar_password_register2()">
+                  <span class="fa fa-eye-slash icon" id="icon2"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary  btn-sm">Registrarme</button>
+            
+          </div>
+      </div>
+    </div>
+  </div>
+</form>
